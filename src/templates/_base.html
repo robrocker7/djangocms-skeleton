@@ -1,0 +1,15 @@
+{% load cms_tags sekizai_tags %}<!DOCTYPE html>
+<html>
+<head>
+    <title>{% page_attribute page_title %}</title>
+    <meta name="description" content="{% page_attribute meta_description %}"/>
+    <meta name="keywords" content="{% page_attribute meta_keywords %}"/>
+    
+    {% render_block "css" %}
+</head>
+<body>
+    {% cms_toolbar %}
+    {% block body_content %}{% endblock %}
+    {% render_block "js" %}
+</body>
+</html>

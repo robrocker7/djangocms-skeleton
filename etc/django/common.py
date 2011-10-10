@@ -206,11 +206,10 @@ LOGGING = {
     }
 }
 """
-# DjangoCMS Specific Settings
-CMS_TEMPLATES = (
-    ('newproject.html', 'New Project'),
-)
 
-LANGUAGES = [
-    ('en', 'English'),
-]
+# local.py should symlink to the websites specific setting files for
+# settings such as templates and plugin options
+try:
+    from etc.django.local import *
+except ImportError:
+    pass

@@ -1,6 +1,8 @@
-{% extends "base.html" %}
-{% load cms_tags %}
+{% extends "_base.html" %}
+{% load cms_tags sekizai_tags %}
 
-{% block base_content %}
-    {% placeholder newproject_content %}
+{% block body_content %}
+    <div>
+        This is a basic template. All templates should extend _base.html
+    </div>
 {% endblock %}

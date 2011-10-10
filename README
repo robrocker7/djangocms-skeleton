@@ -1,0 +1,5 @@
+A skeleton DjangoCMS setting.
+
+NOTE: Use the develop branch on cmsplugin-filer as it has more options https://github.com/stefanfoulis/cmsplugin-filer
+
+Use cmsplugin_filer_folder/folder.html to overwrite the default cmsplugin_folder when adding options.
