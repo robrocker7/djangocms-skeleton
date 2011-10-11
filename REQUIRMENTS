@@ -5,7 +5,9 @@ cmsplugin-filer==0.8.0
 django-classy-tags==0.3.4.1
 django-cms==2.2
 django-filer==0.8.5
+django-form-designer==0.1a8
 django-mptt==0.4.2
+django-picklefield==0.1.9
 django-polymorphic==0.2
 django-sekizai==0.4.2
 easy-thumbnails==1.0-alpha-18
