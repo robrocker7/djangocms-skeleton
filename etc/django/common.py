@@ -79,6 +79,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(settings.PROJECT_ROOT, 'src', 'templates', 'static'),
 )
 
 # List of finder classes that know how to find static files in
@@ -168,6 +169,7 @@ INSTALLED_APPS = (
     'cms.plugins.text',
     # 'cms.plugins.video',
     'cms.plugins.twitter',
+    'cms.plugins.inherit',
 
     # better file handling
     'filer',
@@ -180,6 +182,7 @@ INSTALLED_APPS = (
     'sekizai',
     # for versioning
     # 'reversion',
+    'form_designer',
 )
 
 # A sample logging configuration. The only tangible logging
