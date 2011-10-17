@@ -1,21 +1,23 @@
 from django.conf.urls.defaults import *
 
-# Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 from django.conf import settings
+
+from cms.sitemaps import CMSSitemap
+from cmsplugin_blog.sitemaps import BlogSitemap
 
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
     url(r'^admin/', include(admin.site.urls)),
-    #url(r'^$', 'djangocms.views.home', name='home'),
-    #url(r'^djangocms/', include('djangocms.foo.urls')),
 
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
+    url(r'^sitemap.xml$', 'django.contrib.sitemaps.views.sitemap', {
+        'sitemaps': {
+            'cmspages': CMSSitemap,
+            'blogentries': BlogSitemap
+        }
+    }),
+    
     url(r'^', include('cms.urls')),
 )
 
