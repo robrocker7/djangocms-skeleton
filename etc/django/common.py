@@ -183,6 +183,13 @@ INSTALLED_APPS = (
     # for versioning
     # 'reversion',
     'form_designer',
+
+    # blog specific apps
+    'cmsplugin_blog',
+    'djangocms_utils',
+    'simple_translation',
+    'tagging',
+    'missing',
 )
 
 # A sample logging configuration. The only tangible logging
