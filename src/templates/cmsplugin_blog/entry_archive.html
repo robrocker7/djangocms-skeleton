@@ -1,0 +1,22 @@
+{% extends "cmsplugin_blog/cmsplugin_blog_base.html" %}
+{% load i18n placeholder_tags cmsplugin_blog_tags simple_translation_tags %}
+
+{% block left-col %}
+{{ block.super }}
+
+<h1>{% trans "Latest entries" %}</h1>
+
+{% include "cmsplugin_blog/latest_entries.html" %}
+
+{% endblock %}
+
+{% block right-col %}
+
+{% render_author_links %}
+
+{% render_month_links %}
+
+{% render_tag_links %}
+
+{% endblock %}
+

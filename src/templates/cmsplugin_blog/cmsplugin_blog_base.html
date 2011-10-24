@@ -1,6 +1,13 @@
 {% extends "tesmod.html" %}
 
 {% block main_content %}
+    <div id="blog">
+        <div id="left-col">
     {% block left-col %}{% endblock %}
+        </div>
+        <div id="right-col">
     {% block right-col %}{% endblock %}
+        </div>
+        <div class="clear"></div>
+    </div>
 {% endblock %}

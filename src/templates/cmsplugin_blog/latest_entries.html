@@ -1,0 +1,18 @@
+{% load i18n placeholder_tags simple_translation_tags djangocms_utils_tags %}
+{% for entry in latest|annotate_with_translations %}
+<div class="blog_entry {% cycle 'odd' 'even' %}{% if forloop.last %} omega{% endif %}{% if forloop.first %} alpha{% endif %}">
+    {% with entry|get_preferred_translation_from_request:request as title %}
+    {% with entry.placeholders|choose_placeholder:"excerpt" as excerpt %}
+    <p class="date">{{ entry.pub_date|date:"d b Y" }}</p>
+    <h3><a href="{{ title.get_absolute_url }}">{{ title }}</a></h3>
+    {{ entry|render_language_choices:request|safe }}
+    
+    <p class="excerpt">{% render_placeholder excerpt %}</p>
+    {% endwith %}
+    {% endwith %}
+    <div class="clear"></div>
+</div>
+{% empty %}
+<p>{% trans "No entries" %}</p>
+{% endfor %}
+
