@@ -158,6 +158,7 @@ INSTALLED_APPS = (
     'menus',
     'mptt',
     'south',
+    'tinymce',
 
     # 'cms.plugins.file',
     'cms.plugins.flash',
